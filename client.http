@@ -1,0 +1,45 @@
+@base_url=http://localhost:8080/api/v1
+
+### List Openings
+
+GET {{base_url}}/openings
+Accept: application/json
+Content-Type: application/json
+
+### Get Opening
+
+@opening_id="87f24ccc-1258-454f-9f60-809b120d03d6"
+
+GET {{base_url}}/opening
+Content-Type: application/json
+
+### Create Opening
+
+POST {{base_url}}/opening
+Content-Type: application/json
+
+{
+}
+
+### Update Opening
+
+@opening_id=81537359-6742-48a4-81c7-06ab62f59194
+
+PUT {{base_url}}/opening/{{mission_id}}
+Content-Type: application/json
+
+{ 
+}
+
+### Delete Opening
+
+# @prompt opening_id Mission ID to delete
+#         ---- ------------------------------
+#         |    |
+#         |    `- variable description (optional)
+#         |
+#         `- variable name
+
+DELETE {{base_url}}/opening/{{opening_id}}
+Content-Type: application/json
+
