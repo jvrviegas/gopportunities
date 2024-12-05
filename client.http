@@ -8,9 +8,9 @@ Content-Type: application/json
 
 ### Get Opening
 
-@opening_id="87f24ccc-1258-454f-9f60-809b120d03d6"
+@opening_id=2
 
-GET {{base_url}}/opening
+GET {{base_url}}/opening?id={{opening_id}}
 Content-Type: application/json
 
 ### Create Opening
@@ -19,27 +19,26 @@ POST {{base_url}}/opening
 Content-Type: application/json
 
 {
+    "role": "Senior da Vida",
+    "company": "Life God",
+    "location": "Somewhere",
+    "remote": false,
+    "link": "http://localhost:2000",
+    "salary": 520000
 }
 
 ### Update Opening
 
-@opening_id=81537359-6742-48a4-81c7-06ab62f59194
+@opening_id=2
 
-PUT {{base_url}}/opening/{{mission_id}}
+PUT {{base_url}}/opening?id={{opening_id}}
 Content-Type: application/json
 
 { 
+    "company": "Gaagle"
 }
 
 ### Delete Opening
 
-# @prompt opening_id Mission ID to delete
-#         ---- ------------------------------
-#         |    |
-#         |    `- variable description (optional)
-#         |
-#         `- variable name
-
-DELETE {{base_url}}/opening/{{opening_id}}
+DELETE {{base_url}}/opening?id=1
 Content-Type: application/json
-
